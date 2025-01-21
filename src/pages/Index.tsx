@@ -12,7 +12,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-purple-50 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-white to-secondary/10 relative overflow-hidden">
       {/* Decorative Mandala Elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
@@ -22,10 +22,10 @@ const Index = () => {
       <div className="absolute inset-0 opacity-5 pointer-events-none"
            style={{
              backgroundImage: `
-               radial-gradient(circle at 50% 50%, transparent 20%, rgba(91, 33, 182, 0.1) 21%, transparent 22%),
-               radial-gradient(circle at 50% 50%, transparent 30%, rgba(91, 33, 182, 0.1) 31%, transparent 32%),
-               radial-gradient(circle at 50% 50%, transparent 40%, rgba(91, 33, 182, 0.1) 41%, transparent 42%),
-               radial-gradient(circle at 50% 50%, transparent 50%, rgba(91, 33, 182, 0.1) 51%, transparent 52%)
+               radial-gradient(circle at 50% 50%, transparent 20%, rgba(139, 69, 19, 0.1) 21%, transparent 22%),
+               radial-gradient(circle at 50% 50%, transparent 30%, rgba(218, 165, 32, 0.1) 31%, transparent 32%),
+               radial-gradient(circle at 50% 50%, transparent 40%, rgba(139, 69, 19, 0.1) 41%, transparent 42%),
+               radial-gradient(circle at 50% 50%, transparent 50%, rgba(218, 165, 32, 0.1) 51%, transparent 52%)
              `,
              backgroundSize: '100px 100px',
              backgroundPosition: 'center center'

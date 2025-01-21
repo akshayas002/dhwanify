@@ -25,15 +25,15 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#5B21B6",
+          DEFAULT: "#8B4513", // Saddle Brown
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#F97316",
-          foreground: "#FFFFFF",
+          DEFAULT: "#DAA520", // Goldenrod
+          foreground: "#000000",
         },
         accent: {
-          DEFAULT: "#FCD34D",
+          DEFAULT: "#D4AF37", // Metallic Gold
           foreground: "#000000",
         },
         destructive: {
