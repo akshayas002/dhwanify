@@ -36,7 +36,7 @@ const Index = () => {
       <div className="container py-12 relative z-10">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-bold text-primary mb-4">
-            Indian Music Generator
+            Dhwanify AI
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Create unique Indian music by describing your vision. Blend traditional styles
