@@ -13,33 +13,63 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-secondary/10 relative overflow-hidden">
-      {/* Decorative Mandala Elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-accent/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" />
-      
-      {/* Mandala Pattern Overlay */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none"
-           style={{
-             backgroundImage: `
-               radial-gradient(circle at 50% 50%, transparent 20%, rgba(139, 69, 19, 0.1) 21%, transparent 22%),
-               radial-gradient(circle at 50% 50%, transparent 30%, rgba(218, 165, 32, 0.1) 31%, transparent 32%),
-               radial-gradient(circle at 50% 50%, transparent 40%, rgba(139, 69, 19, 0.1) 41%, transparent 42%),
-               radial-gradient(circle at 50% 50%, transparent 50%, rgba(218, 165, 32, 0.1) 51%, transparent 52%)
-             `,
-             backgroundSize: '100px 100px',
-             backgroundPosition: 'center center'
-           }}
-      />
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Animated Mandala Background */}
+      <div className="fixed inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-white to-[#DAA520]/10" />
+        
+        {/* Floral Mandala Pattern */}
+        <div className="absolute inset-0 animate-spin-slow opacity-20">
+          {[...Array(8)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute inset-0"
+              style={{
+                transform: `rotate(${i * 45}deg)`,
+                backgroundImage: `
+                  radial-gradient(circle at 50% 50%, #800020 2%, transparent 2.5%),
+                  radial-gradient(circle at 50% 50%, #DAA520 4%, transparent 4.5%),
+                  radial-gradient(circle at 50% 50%, #E6B8B8 6%, transparent 6.5%),
+                  radial-gradient(circle at 50% 50%, #D4AF37 8%, transparent 8.5%),
+                  radial-gradient(circle at 50% 50%, #800020 10%, transparent 10.5%)
+                `,
+                backgroundSize: '100% 100%',
+                animation: `pulse-slow ${3 + i * 0.5}s infinite`,
+                animationDelay: `${i * 0.2}s`
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Floral Elements */}
+        <div className="absolute inset-0">
+          {[...Array(12)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-full h-full origin-center"
+              style={{
+                transform: `rotate(${i * 30}deg)`,
+                backgroundImage: `
+                  radial-gradient(circle at 50% 0%, #DAA520 1%, transparent 2%),
+                  radial-gradient(circle at 50% 0%, #800020 3%, transparent 4%),
+                  radial-gradient(circle at 50% 0%, #D4AF37 5%, transparent 6%)
+                `,
+                backgroundSize: '50% 50%',
+                animation: `pulse-slow ${4 + i * 0.3}s infinite`,
+                animationDelay: `${i * 0.1}s`
+              }}
+            />
+          ))}
+        </div>
+      </div>
 
       {/* Content */}
       <div className="container py-12 relative z-10">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold text-primary mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold text-[#800020] mb-4">
             Dhwanify AI
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-[#800020]/80 max-w-2xl mx-auto">
             Create unique Indian music by describing your vision. Blend traditional styles
             with modern creativity.
           </p>
