@@ -41,4 +41,39 @@
     font-family: 'Yatra One', cursive;
     @apply font-bold;
   }
+
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes pulse-slow {
+    0% {
+      transform: scale(1);
+      opacity: 0.2;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.4;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.2;
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+  }
+
+  .animate-pulse-slow-0 { animation: pulse-slow 4s infinite; }
+  .animate-pulse-slow-1 { animation: pulse-slow 4s infinite; }
+  .animate-pulse-slow-2 { animation: pulse-slow 4s infinite; }
+  .animate-pulse-slow-3 { animation: pulse-slow 4s infinite; }
+  .animate-pulse-slow-4 { animation: pulse-slow 4s infinite; }
+  .animate-pulse-slow-5 { animation: pulse-slow 4s infinite; }
 }
