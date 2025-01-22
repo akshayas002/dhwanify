@@ -2,6 +2,7 @@ import React from "react";
 import PromptInput from "@/components/PromptInput";
 import MusicPlayer from "@/components/MusicPlayer";
 import SavedTracks from "@/components/SavedTracks";
+import ExploreStyles from "@/components/ExploreStyles";
 
 const Index = () => {
   const [isPlaying, setIsPlaying] = React.useState(false);
@@ -57,8 +58,9 @@ const Index = () => {
           />
         </div>
 
-        {/* Saved Tracks */}
-        <div className="flex justify-center">
+        {/* Explore Styles and Saved Tracks */}
+        <div className="flex flex-col md:flex-row justify-center items-start gap-8">
+          <ExploreStyles />
           <SavedTracks />
         </div>
       </div>

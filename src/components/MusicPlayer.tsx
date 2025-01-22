@@ -1,5 +1,5 @@
 import React from "react";
-import { Play, Pause, SkipBack, SkipForward, Volume2 } from "lucide-react";
+import { Play, Pause, SkipBack, SkipForward, Volume2, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import { Slider } from "./ui/slider";
 
@@ -9,6 +9,11 @@ interface MusicPlayerProps {
 }
 
 const MusicPlayer = ({ isPlaying = false, onPlayPause = () => {} }: MusicPlayerProps) => {
+  const handleDownload = () => {
+    // TODO: Implement actual download functionality when audio is available
+    console.log("Downloading track...");
+  };
+
   return (
     <div className="w-full max-w-3xl bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg">
       {/* Waveform Visualization */}
@@ -45,6 +50,15 @@ const MusicPlayer = ({ isPlaying = false, onPlayPause = () => {} }: MusicPlayerP
           </Button>
           <Button variant="ghost" size="icon">
             <SkipForward className="h-6 w-6" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={handleDownload}
+            className="ml-2"
+            title="Download track"
+          >
+            <Download className="h-6 w-6" />
           </Button>
         </div>
 
